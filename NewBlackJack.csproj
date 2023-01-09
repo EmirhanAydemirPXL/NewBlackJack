@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4302464D-0C60-47AA-ADCB-3593B8B98D1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NewBlackJack</RootNamespace>
+    <AssemblyName>NewBlackJack</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DispatchTimer.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photos\blackjackbackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photos\black_joker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photos\ace_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kaarten\harten 10.png" />
+    <Resource Include="kaarten\harten 2.png" />
+    <Resource Include="kaarten\harten 3.png" />
+    <Resource Include="kaarten\harten 4.png" />
+    <Resource Include="kaarten\harten 5.png" />
+    <Resource Include="kaarten\harten 6.png" />
+    <Resource Include="kaarten\harten 7.png" />
+    <Resource Include="kaarten\harten 8.png" />
+    <Resource Include="kaarten\harten 9.png" />
+    <Resource Include="kaarten\harten aas.png" />
+    <Resource Include="kaarten\harten boer.png" />
+    <Resource Include="kaarten\harten heer.png" />
+    <Resource Include="kaarten\harten vrouw.png" />
+    <Resource Include="kaarten\klaveren 10.png" />
+    <Resource Include="kaarten\klaveren 2.png" />
+    <Resource Include="kaarten\klaveren 3.png" />
+    <Resource Include="kaarten\klaveren 4.png" />
+    <Resource Include="kaarten\klaveren 5.png" />
+    <Resource Include="kaarten\klaveren 6.png" />
+    <Resource Include="kaarten\klaveren 7.png" />
+    <Resource Include="kaarten\klaveren 8.png" />
+    <Resource Include="kaarten\klaveren 9.png" />
+    <Resource Include="kaarten\klaveren aas.png" />
+    <Resource Include="kaarten\klaveren boer.png" />
+    <Resource Include="kaarten\klaveren heer.png" />
+    <Resource Include="kaarten\klaveren vrouw.png" />
+    <Resource Include="kaarten\ruiten 10.png" />
+    <Resource Include="kaarten\ruiten 2.png" />
+    <Resource Include="kaarten\ruiten 3.png" />
+    <Resource Include="kaarten\ruiten 4.png" />
+    <Resource Include="kaarten\ruiten 5.png" />
+    <Resource Include="kaarten\ruiten 6.png" />
+    <Resource Include="kaarten\ruiten 7.png" />
+    <Resource Include="kaarten\ruiten 8.png" />
+    <Resource Include="kaarten\ruiten 9.png" />
+    <Resource Include="kaarten\ruiten aas.png" />
+    <Resource Include="kaarten\ruiten boer.png" />
+    <Resource Include="kaarten\ruiten heer.png" />
+    <Resource Include="kaarten\ruiten vrouw.png" />
+    <Resource Include="kaarten\schoppen 10.png" />
+    <Resource Include="kaarten\schoppen 2.png" />
+    <Resource Include="kaarten\schoppen 3.png" />
+    <Resource Include="kaarten\schoppen 4.png" />
+    <Resource Include="kaarten\schoppen 5.png" />
+    <Resource Include="kaarten\schoppen 6.png" />
+    <Resource Include="kaarten\schoppen 7.png" />
+    <Resource Include="kaarten\schoppen 8.png" />
+    <Resource Include="kaarten\schoppen 9.png" />
+    <Resource Include="kaarten\schoppen aas.png" />
+    <Resource Include="kaarten\schoppen boer.png" />
+    <Resource Include="kaarten\schoppen heer.png" />
+    <Resource Include="kaarten\schoppen vrouw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kaarten\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photos\dubbelDown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

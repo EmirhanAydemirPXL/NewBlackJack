@@ -1,0 +1,346 @@
+﻿<Window x:Class="NewBlackJack.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewBlackJack"
+        mc:Ignorable="d"
+        Title="Black Jack" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush Stretch="Fill" ImageSource="photos/blackjackbackground.jpg" AlignmentY="Top" AlignmentX="Center" />
+    </Window.Background>
+
+
+    <Grid Height="430" Width="780">
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+
+
+
+
+
+        <Button Name="deelKaart" Grid.Column="0" Grid.Row="1" Margin="35" Click="deelKaart_Click">Deel</Button>
+
+
+        <Button Name="HitKaart" Grid.Column="0" Grid.Row="2" Margin="35" Click="HitKaart_Click">
+            Hit
+        </Button>
+        <Button Name="StandKaart" Grid.Column="0" Grid.Row="3" Margin="35" Click="StandKaart_Click">
+            Stand
+        </Button>
+
+        <Button Name="BtnNieuweSpel" Grid.Column="2" Grid.Row="3" Margin="25" Click="BtnNieuweSpel_Click">
+            Nieuwe Spel
+        </Button>
+
+        <Label
+            Name="puntenBank"
+            Grid.Row="0"
+            Grid.Column="2"
+            FontSize="60"
+            Margin="0,12,25,10"
+            HorizontalAlignment="Right" 
+            Foreground="White"
+            Background="Black"
+            
+            
+            >0</Label>
+        <Label
+            Name="puntenSpeler"
+            Grid.Row="0"
+            Grid.Column="1"
+            FontSize="60"
+            Margin="193,10,0,10"
+            HorizontalAlignment="Left"
+            Foreground="White"
+            Background="Black"
+            >0</Label>
+
+
+
+
+        <Label
+            Background="#FF570000"
+            Grid.Column="1"
+            Grid.Row="1"
+            Margin="10 0 10 0"
+            Name="OutputSpeler"/>
+
+        <Label
+            Background="#FF570000"
+            Grid.Column="2"
+            Grid.Row="1"
+            Margin="10 0 10 0"
+            Name="OutputBank"
+   
+            >
+
+        </Label>
+
+
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="1"
+            FontSize="20"
+            HorizontalAlignment="Left"
+            Margin="39 15 0 65"
+            Background="Black"
+            Foreground="Wheat">
+            Inzet</TextBlock>
+
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="1"
+            FontSize="25"
+            HorizontalAlignment="Left"
+            Margin="5 60 0 10"
+            Background="Black"
+            Foreground="Wheat">
+            
+            Kapitaal</TextBlock>
+
+        <TextBox Name="inzetInput"
+                 Grid.Row="3"
+                 Grid.Column="1"
+                 Margin="100 13 90 55"
+                 Background="Black"
+                 Foreground="White"
+                 FontSize="20">
+
+        </TextBox>
+        <Label
+            Name="kapitaalOutput"
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="100 60 90 10"
+            Background="DarkGray"
+            Foreground="white"
+            FontSize="25"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center">
+
+        </Label>
+
+
+        <Menu FontSize="25" Margin="0,0,0,442" >
+            <MenuItem Header="File" />
+        </Menu>
+
+        <TextBlock
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="10,44,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Text="Speler"
+            Height="54"
+            Width="116"
+            FontSize="30"
+            Foreground="White"
+            Background="Black"/>
+        <TextBlock
+            Grid.Column="2"
+            HorizontalAlignment="Left"
+            Margin="10,44,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Text="Bank"
+            Height="54"
+            Width="79"
+            FontSize="30"
+            Foreground="White"
+            Background="Black"/>
+
+
+        <Image
+            Name="imageCards1"
+            Grid.Column="1"
+            HorizontalAlignment="Left"           
+            Margin="19,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Width="64"
+            Height="87"/>
+
+        <Image
+            Name="imageCards2"
+            Grid.Column="1"
+            HorizontalAlignment="Left"           
+            Margin="60,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Width="64"
+            Height="86"
+            
+            />
+        <Image
+            Name="imageCards3"
+            Grid.Column="2"
+            HorizontalAlignment="Left"           
+            Margin="25,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Width="64"
+            Height="86"
+            
+            />
+        <Image
+            Name="imageCards4"
+            Grid.Column="2"
+            HorizontalAlignment="Left"           
+            Margin="70,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Width="64"
+            Height="87"
+            
+            />
+        <Image
+            Name="imageCards5"
+            Grid.Column="1"
+            HorizontalAlignment="Left"           
+            Margin="100,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Width="64"
+            Height="87"
+            
+            
+            />
+        <Image
+            Name="imageCards6"
+            Grid.Column="1"
+            HorizontalAlignment="Left"           
+            Margin="135,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Width="64"
+            Height="86"/>
+        <Image
+            Name="imageCards7"
+            Grid.Column="2"
+            HorizontalAlignment="Left"           
+            Margin="113,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Width="64"
+            Height="86"/>
+
+        <Image
+            Name="imageCards8"
+            Grid.Column="2"
+            HorizontalAlignment="Left"
+            Margin="152,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="center"
+            Height="86"
+            Width="64"/>
+
+        <Label Foreground="White"
+               Name="KaartenTextOutputBank"
+               Grid.Column="2"
+               HorizontalAlignment="Center"
+               Grid.Row="2"
+               VerticalAlignment="Center"
+               Background="Black"
+               Height="90"
+               Width="210"/>
+
+        <Label Foreground="White"
+               Name="KaartenTextOutputSpeler"
+               Grid.Column="1"
+               HorizontalAlignment="Center"              
+               Grid.Row="2"
+               VerticalAlignment="Center"
+               Background="Black"
+               Height="90"
+               Width="210"/>
+
+        <Label
+               Content="RONDE"
+               HorizontalAlignment="Left"
+               Margin="0,10,0,0"
+               VerticalAlignment="Top"
+               Height="33"
+               Width="99"
+               Background="#FF4E4E4E"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Bottom"
+            MouseDoubleClick="Label_MouseDoubleClick"
+            />
+
+        <Label
+            Name="rondeTeller"
+            Content="1"
+            HorizontalAlignment="Left"
+            Margin="0,44,0,0"
+            VerticalAlignment="Top"
+            Background="#FF4E4E4E"
+            Height="40"
+            Width="99"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Top"
+            FontSize="25"
+            MouseDoubleClick="Klik_Doorlopend_Ronde"
+            
+            />
+        <!--<Button Grid.Column="1" Content="Button" Margin="193,107,6,0" Grid.Row="2" VerticalAlignment="Top" Height="62" Grid.RowSpan="2" Click="Button_Click"/>-->
+        <TextBlock
+            TextAlignment="Center"
+            Name="TxtTijd"
+            Text="00:01:15"
+            HorizontalAlignment="Left"
+            Margin="104,11,0,0"
+            VerticalAlignment="Top"
+            Background="#FF4E4E4E"
+            Width="156"
+            Height="32"
+            FontSize="20"/>
+        <Label
+            Name="historiekRonde"
+            Content=""
+            HorizontalAlignment="Left"
+            Margin="104,44,0,0"
+            VerticalAlignment="Top"
+            Height="64"
+            Width="156"
+            Background="#FF4E4E4E"
+            FontSize="10"
+            MouseDoubleClick="HistoriekRonde_MouseDoubleClick" Grid.RowSpan="2"
+            />
+
+
+
+        <Button
+            Name="dubbeldownBtn"
+            Grid.Column="1"
+            Content="Double Down"
+            HorizontalAlignment="Left"
+            Height="29"
+            Margin="172,18,0,0"
+            Grid.Row="3"
+            VerticalAlignment="Top"
+            Width="85"
+            Click="DubbeldownBtn_Click"
+            />
+
+
+
+    </Grid>
+</Window>
